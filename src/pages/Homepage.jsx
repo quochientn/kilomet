@@ -1,5 +1,11 @@
+import Hero from "../ui/Hero";
+
 function Homepage() {
-  return <div>Home</div>;
+  return (
+    <>
+      <Hero />
+    </>
+  );
 }
 
 export default Homepage;

@@ -5,7 +5,6 @@ import { useSettings } from "../hooks/useSettings";
 import Spinner from "./Spinner";
 
 const Img = styled("img")`
-  height: auto;
   width: 10rem;
 `;
 
