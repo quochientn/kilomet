@@ -24,23 +24,30 @@ function Hero() {
           {title}
         </Typography>
       </Box>
-      <swiper-container
+
+      <Box
+        height="100vh"
+        style={{
+          background: `linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.8)), url(${banners[1]}) center no-repeat fixed`,
+          backgroundSize: "cover",
+        }}
+      ></Box>
+      {/* <swiper-container
         loop={true}
         speed={500}
         autoplay={JSON.stringify({ delay: 5000 })}
+        style={{ height: "100vh" }}
       >
         {banners.map((banner) => (
-          <swiper-slide key={banner}>
-            <Box
-              height="100vh"
-              sx={{
-                background: `linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.8)), url(${banner}) center no-repeat fixed`,
-                backgroundSize: "cover",
-              }}
-            ></Box>
-          </swiper-slide>
+          <swiper-slide
+            key={banner}
+            style={{
+              background: `linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.8)), url(${banner}) center no-repeat fixed`,
+              backgroundSize: "cover",
+            }}
+          ></swiper-slide>
         ))}
-      </swiper-container>
+      </swiper-container> */}
     </>
   );
 }
