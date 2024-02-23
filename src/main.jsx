@@ -1,10 +1,13 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { ThemeProvider, createTheme } from "@mui/material";
+import { register } from "swiper/element/bundle";
 
 import App from "./App.jsx";
 import "./index.css";
 import { PALETTE_COLOR } from "./utils/constant.js";
+
+register();
 
 let theme = createTheme({
   typography: {
