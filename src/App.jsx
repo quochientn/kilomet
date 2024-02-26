@@ -7,6 +7,7 @@ import About from "./pages/About";
 import Training from "./pages/Training";
 import Blog from "./pages/Blog";
 import Contact from "./pages/Contact";
+import PageNotFound from "./pages/PageNotFound";
 
 const queryClient = new QueryClient();
 
@@ -22,6 +23,7 @@ function App() {
             <Route path="blog" element={<Blog />} />
             <Route path="blog/:blogId" element={<Blog />} />
             <Route path="contact" element={<Contact />} />
+            <Route path="*" element={<PageNotFound />} />
           </Route>
         </Routes>
       </BrowserRouter>
