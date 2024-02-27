@@ -2,13 +2,12 @@ import { NavLink } from "react-router-dom";
 import { styled } from "@mui/material";
 
 const StyledNav = styled("nav")`
-  margin-left: auto;
+  /* margin-left: auto; */
 `;
 
 const StyledNavList = styled("ul")`
   display: flex;
   gap: 2rem;
-  margin-left: auto;
 `;
 
 const StyledNavLink = styled(NavLink)(
