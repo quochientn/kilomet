@@ -14,19 +14,20 @@ const StyledImg = styled("img")`
 `;
 
 function Partners() {
-  const { homepage: { partners } = {}, isLoading } = useHomepage();
+  const { homepage: { partnersImage, partnersTitle } = {}, isLoading } =
+    useHomepage();
 
   if (isLoading) return <Spinner />;
 
   return (
     <Container maxWidth="xl" component="section">
-      <Stack spacing={8} sx={{ py: "6rem" }}>
+      <Stack spacing={8} py={12}>
         <Typography variant="h3" align="center">
-          Đồng hành cùng Kilomet
+          {partnersTitle}
         </Typography>
 
         <Box display="flex" justifyContent="space-evenly">
-          {partners?.map((partner) => (
+          {partnersImage?.map((partner) => (
             <StyledImg src={partner} alt="Partner logo" key={partner} />
           ))}
         </Box>
