@@ -1,11 +1,12 @@
-import { Container, Stack, Typography } from "@mui/material";
+import { Container, Divider, Stack, Typography } from "@mui/material";
 
 import { useAbout } from "../hooks/useAbout";
 import Spinner from "./Spinner";
 import TopBanner from "./TopBanner";
 
 function Introduction() {
-  const { about: { title, description, banner } = {}, isLoading } = useAbout();
+  const { about: { title, description, banner, coachTitle } = {}, isLoading } =
+    useAbout();
 
   if (isLoading) return <Spinner />;
 
@@ -14,13 +15,24 @@ function Introduction() {
       <TopBanner banner={banner} />
 
       <Container maxWidth="xl">
-        <Stack py={12} spacing={8}>
+        <Stack pt={12} spacing={8}>
           <Typography variant="h3" align="center" textTransform="uppercase">
             {title}
           </Typography>
 
           <Typography variant="body1" sx={{ whiteSpace: "pre-line" }}>
             {description}
+          </Typography>
+
+          <Divider sx={{ borderColor: "primary.main" }} />
+
+          <Typography
+            variant="h3"
+            align="center"
+            textTransform="uppercase"
+            // mt={2}
+          >
+            {coachTitle}
           </Typography>
         </Stack>
       </Container>

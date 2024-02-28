@@ -5,17 +5,18 @@ import {
   Stack,
   Typography,
   styled,
+  useTheme,
 } from "@mui/material";
 
 import { useHomepage } from "../hooks/useHomepage";
 import Spinner from "./Spinner";
-import { PALETTE_COLOR } from "../utils/constant";
 
 const StyledImg = styled("img")`
   height: 100%;
 `;
 
 function HomeTraining() {
+  const theme = useTheme();
   const {
     homepage: { trainingTitle, trainingDescription, trainingImages } = {},
     isLoading,
@@ -43,12 +44,13 @@ function HomeTraining() {
           sticky: true,
         })}
         slides-per-view="auto"
+        space-between="5"
         loop="true"
         autoplay-delay="5000"
         pagination-dynamic-bullets="true"
         style={{
           height: "30rem",
-          "--swiper-pagination-color": `${PALETTE_COLOR.red}`,
+          "--swiper-pagination-color": `${theme.palette.primary.main}`,
         }}
       >
         {trainingImages.map((img) => (
