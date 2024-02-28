@@ -60,17 +60,31 @@ function CoachDetail() {
                 {name}
               </Typography>
 
-              <Typography variant="h5">HM: {hm ? hm : "-"}</Typography>
+              <Box display="flex" gap={6}>
+                <Stack spacing={3}>
+                  <Typography variant="h5">Half Marathon:</Typography>
 
-              <Typography variant="h5">FM: {fm ? fm : "-"}</Typography>
+                  <Typography variant="h5">Marathon:</Typography>
 
-              <Typography variant="h5">
-                100K: {oneHundredKm ? oneHundredKm : "-"}
-              </Typography>
+                  <Typography variant="h5">100km:</Typography>
 
-              <Typography variant="h5">
-                100M: {oneHundredMiles ? oneHundredMiles : "-"}
-              </Typography>
+                  <Typography variant="h5">100miles:</Typography>
+                </Stack>
+
+                <Stack spacing={3} textAlign="right">
+                  <Typography variant="h5">{hm ? hm : "-"}</Typography>
+
+                  <Typography variant="h5">{fm ? fm : "-"}</Typography>
+
+                  <Typography variant="h5">
+                    {oneHundredKm ? oneHundredKm : "-"}
+                  </Typography>
+
+                  <Typography variant="h5">
+                    {oneHundredMiles ? oneHundredMiles : "-"}
+                  </Typography>
+                </Stack>
+              </Box>
             </Stack>
           </Box>
         </Container>

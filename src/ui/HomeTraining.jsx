@@ -1,24 +1,13 @@
-import {
-  Box,
-  Button,
-  Container,
-  Stack,
-  Typography,
-  styled,
-  useTheme,
-} from "@mui/material";
+import { Box, Button, Container, Stack, Typography } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 
 import { useHomepage } from "../hooks/useHomepage";
 import Spinner from "./Spinner";
-
-const StyledImg = styled("img")`
-  height: 100%;
-`;
+import TrainingCarousel from "./TrainingCarousel";
 
 function HomeTraining() {
   const navigate = useNavigate();
-  const theme = useTheme();
+
   const {
     homepage: { trainingTitle, trainingDescription, trainingImages } = {},
     isLoading,
@@ -42,27 +31,7 @@ function HomeTraining() {
         </Stack>
       </Container>
 
-      <swiper-container
-        free-mode={JSON.stringify({
-          enabled: true,
-          sticky: true,
-        })}
-        slides-per-view="auto"
-        space-between="5"
-        loop="true"
-        autoplay-delay="5000"
-        pagination-dynamic-bullets="true"
-        style={{
-          height: "30rem",
-          "--swiper-pagination-color": `${theme.palette.primary.main}`,
-        }}
-      >
-        {trainingImages.map((img) => (
-          <swiper-slide key={img} style={{ height: "100%", width: "auto" }}>
-            <StyledImg src={img} alt="Training" />
-          </swiper-slide>
-        ))}
-      </swiper-container>
+      <TrainingCarousel images={trainingImages} />
     </Box>
   );
 }
