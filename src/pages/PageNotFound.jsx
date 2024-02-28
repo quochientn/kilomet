@@ -1,7 +1,10 @@
 import { ErrorOutline } from "@mui/icons-material";
 import { Box, Button, Container, Typography } from "@mui/material";
+import { useNavigate } from "react-router-dom";
 
 function PageNotFound() {
+  const navigate = useNavigate();
+
   return (
     <Container maxWidth="xl">
       <Box
@@ -18,7 +21,7 @@ function PageNotFound() {
           Trang bạn tìm kiếm đã bị xóa hoặc không tồn tại.
         </Typography>
 
-        <Button href="/">Về trang chủ</Button>
+        <Button onClick={() => navigate("/")}>Về trang chủ</Button>
       </Box>
     </Container>
   );

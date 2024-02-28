@@ -5,6 +5,7 @@ import {
   Link,
   Stack,
   Typography,
+  useTheme,
 } from "@mui/material";
 import { EmailOutlined, PhoneOutlined } from "@mui/icons-material";
 
@@ -13,12 +14,19 @@ import Spinner from "./Spinner";
 import FooterNav from "./FooterNav";
 
 function Footer() {
+  const theme = useTheme();
   const { settings: { email, phone, social } = {}, isLoading } = useSettings();
 
   if (isLoading) return <Spinner />;
 
   return (
-    <Box sx={{ backgroundColor: "primary.dark" }} pt={8} pb={4}>
+    <Box
+      sx={{
+        backgroundImage: `linear-gradient(to bottom, ${theme.palette.primary.main},${theme.palette.secondary.main})`,
+      }}
+      pt={8}
+      pb={4}
+    >
       <Container maxWidth="xl">
         <Stack gap={4} textAlign="center" color="white.main">
           <Stack direction="row">

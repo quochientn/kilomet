@@ -6,6 +6,7 @@ import {
   Typography,
   styled,
 } from "@mui/material";
+import { useNavigate } from "react-router-dom";
 
 import { useHomepage } from "../hooks/useHomepage";
 import Spinner from "./Spinner";
@@ -15,6 +16,7 @@ const StyledImg = styled("img")`
 `;
 
 function HomeAbout() {
+  const navigate = useNavigate();
   const {
     homepage: { aboutTitle, aboutDescription, aboutImage } = {},
     isLoading,
@@ -35,7 +37,7 @@ function HomeAbout() {
           <Typography variant="body1">{aboutDescription}</Typography>
 
           <Box>
-            <Button href="/about">Xem thêm &rarr;</Button>
+            <Button onClick={() => navigate("/about")}>Xem thêm &rarr;</Button>
           </Box>
         </Stack>
       </Box>

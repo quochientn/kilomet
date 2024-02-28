@@ -7,6 +7,7 @@ import {
   styled,
   useTheme,
 } from "@mui/material";
+import { useNavigate } from "react-router-dom";
 
 import { useHomepage } from "../hooks/useHomepage";
 import Spinner from "./Spinner";
@@ -16,6 +17,7 @@ const StyledImg = styled("img")`
 `;
 
 function HomeTraining() {
+  const navigate = useNavigate();
   const theme = useTheme();
   const {
     homepage: { trainingTitle, trainingDescription, trainingImages } = {},
@@ -33,7 +35,9 @@ function HomeTraining() {
           <Typography variant="body1">{trainingDescription}</Typography>
 
           <Box>
-            <Button href="/about">Xem thêm &rarr;</Button>
+            <Button onClick={() => navigate("/training")}>
+              Xem thêm &rarr;
+            </Button>
           </Box>
         </Stack>
       </Container>

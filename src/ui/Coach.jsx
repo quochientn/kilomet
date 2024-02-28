@@ -1,12 +1,4 @@
-import {
-  Box,
-  Card,
-  CardActionArea,
-  CardContent,
-  CardMedia,
-  Typography,
-  styled,
-} from "@mui/material";
+import { Box, Typography, styled } from "@mui/material";
 
 const StyledAvatar = styled("img")`
   height: 20rem;
@@ -15,19 +7,8 @@ const StyledAvatar = styled("img")`
   box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
 `;
 
-function Coach({ src, alt, name }) {
+function Coach({ src, alt, name, onClick }) {
   return (
-    // <Card>
-    //   <CardActionArea>
-    //     <CardMedia image={image} title={title} sx={{ height: 300 }} />
-    //     <CardContent>
-    //       <Typography variant="h5" align="center" textTransform="uppercase">
-    //         {name}
-    //       </Typography>
-    //     </CardContent>
-    //   </CardActionArea>
-    // </Card>
-
     <Box
       display="flex"
       flexDirection="column"
@@ -40,6 +21,7 @@ function Coach({ src, alt, name }) {
           textDecoration: "underline",
         },
       }}
+      onClick={onClick}
     >
       <StyledAvatar src={src} alt={alt} />
 
