@@ -2,6 +2,7 @@ import { Outlet } from "react-router-dom";
 
 import Header from "./Header";
 import Footer from "./Footer";
+import BackToTop from "./BackToTop";
 
 function AppLayout() {
   return (
@@ -10,6 +11,7 @@ function AppLayout() {
 
       <main>
         <Outlet />
+        <BackToTop />
       </main>
 
       <Footer />

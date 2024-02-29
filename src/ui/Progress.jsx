@@ -18,7 +18,11 @@ function Progress() {
   });
 
   return (
-    <Box width="20%" sx={{ position: "relative" }} mt={3}>
+    <Box
+      width="20%"
+      sx={{ position: "relative", display: { md: "block", xs: "none" } }}
+      mt={3}
+    >
       <LinearProgress variant="determinate" value={progress}></LinearProgress>
       <DirectionsRunOutlined
         sx={{
