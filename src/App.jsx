@@ -15,7 +15,7 @@ const queryClient = new QueryClient();
 function App() {
   return (
     <QueryClientProvider client={queryClient}>
-      <BrowserRouter basename="/">
+      <BrowserRouter>
         <Routes>
           <Route element={<AppLayout />}>
             <Route index element={<Homepage />} />
