@@ -26,7 +26,6 @@ function FooterNav() {
       alignItems="flex-start"
       gap={2}
       component="ul"
-      sx={{ listStyle: "none" }}
     >
       {pages.map((page) => (
         <li key={page.name}>

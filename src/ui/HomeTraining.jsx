@@ -24,8 +24,17 @@ function HomeTraining() {
           <Typography variant="body1">{trainingDescription}</Typography>
 
           <Box>
-            <Button onClick={() => navigate("/training")}>
-              Xem thêm &rarr;
+            <Button
+              variant="contained"
+              onClick={() => navigate("/training")}
+              sx={{
+                "&:hover span": {
+                  transform: "translateX(5px)",
+                  transition: "ease 0.3s",
+                },
+              }}
+            >
+              Xem thêm&nbsp;<span>&rarr;</span>
             </Button>
           </Box>
         </Stack>

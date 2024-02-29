@@ -37,7 +37,18 @@ function HomeAbout() {
           <Typography variant="body1">{aboutDescription}</Typography>
 
           <Box>
-            <Button onClick={() => navigate("/about")}>Xem thêm &rarr;</Button>
+            <Button
+              variant="contained"
+              onClick={() => navigate("/about")}
+              sx={{
+                "&:hover span": {
+                  transform: "translateX(5px)",
+                  transition: "ease 0.3s",
+                },
+              }}
+            >
+              Xem thêm&nbsp;<span>&rarr;</span>
+            </Button>
           </Box>
         </Stack>
       </Box>
