@@ -16,7 +16,7 @@ function Introduction() {
 
       <Container maxWidth="xl">
         <Stack pt={12} spacing={8}>
-          <Typography variant="h3" align="center" textTransform="uppercase">
+          <Typography variant="h1" align="center" textTransform="uppercase">
             {title}
           </Typography>
 
@@ -26,12 +26,7 @@ function Introduction() {
 
           <Divider sx={{ borderColor: "primary.main" }} />
 
-          <Typography
-            variant="h3"
-            align="center"
-            textTransform="uppercase"
-            // mt={2}
-          >
+          <Typography variant="h1" align="center" textTransform="uppercase">
             {coachTitle}
           </Typography>
         </Stack>

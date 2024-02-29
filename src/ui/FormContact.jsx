@@ -4,7 +4,7 @@ function FormContact() {
   return (
     <Container maxWidth="md">
       <Stack py={12} spacing={8}>
-        <Typography variant="h3" align="center" textTransform="uppercase">
+        <Typography variant="h1" align="center" textTransform="uppercase">
           Liên hệ
         </Typography>
 

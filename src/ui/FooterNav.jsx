@@ -13,7 +13,7 @@ const StyledNavLink = styled(NavLink)(
     &:link, &:visited {
       color: ${theme.palette.white.main};
       font-weight: 500;
-      
+      font-size: 0.875rem;
     },
   `
 );

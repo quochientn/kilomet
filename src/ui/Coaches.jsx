@@ -16,7 +16,7 @@ function Coaches() {
     <Container maxWidth="lg ">
       <Grid2 container rowSpacing={12} pt={8} pb={12}>
         {coaches.map((coach) => (
-          <Grid2 md={6} key={coach.id}>
+          <Grid2 md={6} xs={12} key={coach.id}>
             <Coach
               src={coach.image}
               alt={coach.name}

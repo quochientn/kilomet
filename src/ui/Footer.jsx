@@ -29,7 +29,10 @@ function Footer() {
     >
       <Container maxWidth="xl">
         <Stack gap={4} textAlign="center" color="white.main">
-          <Stack direction="row">
+          <Stack
+            direction={{ sm: "row", xs: "column" }}
+            spacing={{ sm: "auto", xs: 6 }}
+          >
             <Box
               display="flex"
               flexDirection="column"
@@ -66,7 +69,7 @@ function Footer() {
             </Box>
 
             <Box
-              ml="auto"
+              ml={{ sm: "auto" }}
               display="flex"
               flexDirection="column"
               alignItems="flex-start"
@@ -80,7 +83,7 @@ function Footer() {
             </Box>
 
             <Box
-              ml="auto"
+              ml={{ sm: "auto" }}
               display="flex"
               flexDirection="column"
               alignItems="flex-start"
@@ -100,7 +103,12 @@ function Footer() {
 
           <Divider sx={{ borderColor: "white.main" }} />
 
-          <Box display="flex" justifyContent="space-between">
+          <Box
+            display="flex"
+            flexDirection={{ sm: "row", xs: "column" }}
+            gap={2}
+            justifyContent="space-between"
+          >
             <Typography variant="body2">
               &copy; {new Date().getFullYear()} KILOMET. All rights reserved.
             </Typography>

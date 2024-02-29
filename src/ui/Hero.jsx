@@ -16,11 +16,10 @@ function Hero() {
         alignItems="flex-end"
         height="100vh"
         width="100%"
-        pb={10}
-        mx="auto"
+        pb={12}
         sx={{ position: "absolute", zIndex: 5 }}
       >
-        <Typography variant="h2" color="white.main" align="center">
+        <Typography variant="h1" color="white.main" align="center" px={3}>
           {title}
         </Typography>
       </Box>
@@ -28,26 +27,10 @@ function Hero() {
       <Box
         height="100vh"
         style={{
-          background: `linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.8)), url(${banners[1]}) center no-repeat fixed`,
+          background: `linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.8)), url(${banners}) center no-repeat fixed`,
           backgroundSize: "cover",
         }}
       ></Box>
-      {/* <swiper-container
-        loop={true}
-        speed={500}
-        autoplay={JSON.stringify({ delay: 5000 })}
-        style={{ height: "100vh" }}
-      >
-        {banners.map((banner) => (
-          <swiper-slide
-            key={banner}
-            style={{
-              background: `linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.8)), url(${banner}) center no-repeat fixed`,
-              backgroundSize: "cover",
-            }}
-          ></swiper-slide>
-        ))}
-      </swiper-container> */}
     </>
   );
 }

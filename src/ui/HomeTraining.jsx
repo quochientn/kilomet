@@ -19,7 +19,9 @@ function HomeTraining() {
     <Box bgcolor="gray.light" py={12}>
       <Container maxWidth="xl">
         <Stack spacing={4} mb={8} alignItems="center">
-          <Typography variant="h3">{trainingTitle}</Typography>
+          <Typography variant="h1" textAlign="center">
+            {trainingTitle}
+          </Typography>
 
           <Typography variant="body1">{trainingDescription}</Typography>
 

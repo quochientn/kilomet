@@ -11,7 +11,7 @@ register();
 
 let theme = createTheme({
   typography: {
-    fontFamily: '"Work Sans", sans-serif',
+    fontFamily: "Mulish, sans-serif",
   },
 
   palette: {
@@ -37,6 +37,40 @@ let theme = createTheme({
     },
     white: {
       main: PALETTE_COLOR.white,
+    },
+  },
+});
+
+theme = createTheme(theme, {
+  typography: {
+    h1: {
+      fontSize: "3.75rem",
+      fontWeight: 400,
+      [theme.breakpoints.down("md")]: { fontSize: "2.5rem" },
+    },
+
+    h2: {
+      fontSize: "3rem",
+      fontWeight: 400,
+      [theme.breakpoints.down("md")]: { fontSize: "2.25rem" },
+    },
+
+    h3: {
+      fontSize: "2rem",
+      [theme.breakpoints.down("md")]: { fontSize: "1.5rem" },
+    },
+
+    h4: {
+      fontSize: "1.75rem",
+      [theme.breakpoints.down("md")]: { fontSize: "1.25rem" },
+    },
+
+    h5: {
+      [theme.breakpoints.down("md")]: { fontSize: "1.125rem" },
+    },
+
+    h6: {
+      [theme.breakpoints.down("md")]: { fontSize: "1rem" },
     },
   },
 });

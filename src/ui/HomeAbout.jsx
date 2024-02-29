@@ -26,13 +26,22 @@ function HomeAbout() {
 
   return (
     <Container maxWidth="xl" component="section">
-      <Box display="flex" gap={8} py={12}>
+      <Box
+        display="flex"
+        flexDirection={{ md: "row", xs: "column-reverse" }}
+        gap={8}
+        py={12}
+      >
         <Box>
           <StyledImg src={aboutImage} alt="Kilomet coaches" />
         </Box>
 
-        <Stack spacing={4} mt={6}>
-          <Typography variant="h3">{aboutTitle}</Typography>
+        <Stack
+          spacing={4}
+          mt={{ md: 6 }}
+          alignItems={{ xs: "center", md: "normal" }}
+        >
+          <Typography variant="h1">{aboutTitle}</Typography>
 
           <Typography variant="body1">{aboutDescription}</Typography>
 

@@ -25,7 +25,7 @@ function Coach({ src, alt, name, onClick }) {
     >
       <StyledAvatar src={src} alt={alt} />
 
-      <Typography variant="h5" align="center" textTransform="uppercase">
+      <Typography variant="h3" align="center" textTransform="uppercase">
         {name}
       </Typography>
     </Box>
