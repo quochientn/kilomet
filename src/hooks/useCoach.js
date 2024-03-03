@@ -11,7 +11,7 @@ export function useCoach() {
     isLoading,
     isError,
   } = useQuery({
-    queryKey: ["coach"],
+    queryKey: ["coach", coachId],
     queryFn: () => getCoach(coachId),
   });
 

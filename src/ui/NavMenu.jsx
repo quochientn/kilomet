@@ -32,6 +32,7 @@ function NavMenu() {
 
   const handleClose = () => {
     setIsOpen(false);
+    console.log("closed");
   };
 
   return (
@@ -71,19 +72,29 @@ function NavMenu() {
         <Box px={6} my="auto" component="nav">
           <StyledNavList sx={{ flexDirection: "column" }}>
             <li>
-              <StyledNavLink to="/">Trang chủ</StyledNavLink>
+              <StyledNavLink to="/" onClick={handleClose}>
+                Trang chủ
+              </StyledNavLink>
             </li>
             <li>
-              <StyledNavLink to="/about">Giới thiệu</StyledNavLink>
+              <StyledNavLink to="/about" onClick={handleClose}>
+                Giới thiệu
+              </StyledNavLink>
             </li>
             <li>
-              <StyledNavLink to="/training">Tập luyện</StyledNavLink>
+              <StyledNavLink to="/training" onClick={handleClose}>
+                Tập luyện
+              </StyledNavLink>
             </li>
             <li>
-              <StyledNavLink to="/blog">Blog</StyledNavLink>
+              <StyledNavLink to="/blog" onClick={handleClose}>
+                Blog
+              </StyledNavLink>
             </li>
             <li>
-              <StyledNavLink to="/contact">Liên hệ</StyledNavLink>
+              <StyledNavLink to="/contact" onClick={handleClose}>
+                Liên hệ
+              </StyledNavLink>
             </li>
           </StyledNavList>
         </Box>
