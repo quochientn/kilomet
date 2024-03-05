@@ -12,6 +12,7 @@ import About from "./pages/About";
 import Coach from "./pages/Coach";
 import Training from "./pages/Training";
 import Blog from "./pages/Blog";
+import BlogDetail from "./pages/BlogDetail";
 import Contact from "./pages/Contact";
 import PageNotFound from "./pages/PageNotFound";
 
@@ -25,7 +26,7 @@ const router = createBrowserRouter(
       <Route path="about/:coachId" element={<Coach />} />
       <Route path="training" element={<Training />} />
       <Route path="blog" element={<Blog />} />
-      <Route path="blog/:blogId" element={<Blog />} />
+      <Route path="blog/:blogId" element={<BlogDetail />} />
       <Route path="contact" element={<Contact />} />
       <Route path="*" element={<PageNotFound />} />
     </Route>
