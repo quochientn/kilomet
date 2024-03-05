@@ -5,6 +5,7 @@ import {
   Divider,
   Stack,
   Typography,
+  useTheme,
 } from "@mui/material";
 
 import { useTraning } from "../hooks/useTraining";
@@ -12,7 +13,7 @@ import { useHomepage } from "../hooks/useHomepage";
 import Spinner from "./Spinner";
 import TopBanner from "./TopBanner";
 import TrainingCarousel from "./TrainingCarousel";
-import { useTheme } from "@emotion/react";
+import Heading from "./Heading";
 
 function TrainingInfo() {
   const theme = useTheme();
@@ -38,9 +39,7 @@ function TrainingInfo() {
 
       <Container maxWidth="xl">
         <Stack pt={12} spacing={8}>
-          <Typography variant="h1" align="center" textTransform="uppercase">
-            {title}
-          </Typography>
+          <Heading content={title} />
 
           <Typography variant="body1" sx={{ whiteSpace: "pre-line" }}>
             {description}
@@ -50,7 +49,7 @@ function TrainingInfo() {
             <iframe
               src={mapLink}
               title="Training location"
-              width="80%"
+              width="100%"
               height="500"
             />
           </Box>
@@ -60,9 +59,7 @@ function TrainingInfo() {
       </Container>
 
       <Stack py={8} spacing={8}>
-        <Typography variant="h1" align="center" textTransform="uppercase">
-          Hoạt động cùng Kilomet
-        </Typography>
+        <Heading content="Hoạt động cùng Kilomet" />
 
         <TrainingCarousel images={trainingImages} />
       </Stack>
@@ -74,7 +71,7 @@ function TrainingInfo() {
           p={4}
           sx={{
             border: `3px solid ${theme.palette.primary.main}`,
-            borderRadius: "50px",
+            borderRadius: "15px",
           }}
         >
           <Typography variant="h4">{ctaText}</Typography>

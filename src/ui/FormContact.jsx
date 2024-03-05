@@ -1,12 +1,11 @@
-import { Box, Container, Stack, TextField, Typography } from "@mui/material";
+import { Box, Container, Stack, TextField } from "@mui/material";
+import Heading from "./Heading";
 
 function FormContact() {
   return (
     <Container maxWidth="md">
       <Stack py={12} spacing={8}>
-        <Typography variant="h1" align="center" textTransform="uppercase">
-          Liên hệ
-        </Typography>
+        <Heading content="Liên hệ" />
 
         <Box display="flex" flexDirection="column" gap={6} component="form">
           <TextField

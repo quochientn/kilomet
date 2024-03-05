@@ -3,6 +3,7 @@ import { Container, Divider, Stack, Typography } from "@mui/material";
 import { useAbout } from "../hooks/useAbout";
 import Spinner from "./Spinner";
 import TopBanner from "./TopBanner";
+import Heading from "./Heading";
 
 function Introduction() {
   const { about: { title, description, banner, coachTitle } = {}, isLoading } =
@@ -16,9 +17,7 @@ function Introduction() {
 
       <Container maxWidth="xl">
         <Stack pt={12} spacing={8}>
-          <Typography variant="h1" align="center" textTransform="uppercase">
-            {title}
-          </Typography>
+          <Heading content={title} />
 
           <Typography variant="body1" sx={{ whiteSpace: "pre-line" }}>
             {description}
@@ -26,9 +25,7 @@ function Introduction() {
 
           <Divider sx={{ borderColor: "primary.main" }} />
 
-          <Typography variant="h1" align="center" textTransform="uppercase">
-            {coachTitle}
-          </Typography>
+          <Heading content={coachTitle} />
         </Stack>
       </Container>
     </>
