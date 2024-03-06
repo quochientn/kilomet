@@ -8,6 +8,7 @@ import {
   useTheme,
 } from "@mui/material";
 import { EmailOutlined, PhoneOutlined } from "@mui/icons-material";
+import { motion } from "framer-motion";
 
 import { useSettings } from "../hooks/useSettings";
 import Spinner from "./Spinner";
@@ -28,7 +29,18 @@ function Footer() {
       pb={4}
     >
       <Container maxWidth="xl">
-        <Stack gap={4} textAlign="center" color="white.main">
+        <Stack
+          gap={4}
+          textAlign="center"
+          color="white.main"
+          component={motion.div}
+          initial={{ opacity: 0 }}
+          whileInView={{
+            opacity: 1,
+            transition: { duration: 1.5 },
+          }}
+          viewport={{ once: true }}
+        >
           <Stack
             direction={{ sm: "row", xs: "column" }}
             spacing={{ sm: "auto", xs: 6 }}

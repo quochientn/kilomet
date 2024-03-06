@@ -1,5 +1,3 @@
-import { Box, Typography } from "@mui/material";
-
 import TopBanner from "../ui/TopBanner";
 import Posts from "../ui/Posts";
 

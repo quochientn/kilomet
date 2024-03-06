@@ -1,11 +1,12 @@
+import { Container, Stack } from "@mui/material";
+import Grid2 from "@mui/material/Unstable_Grid2/Grid2";
 import { useNavigate } from "react-router-dom";
-import { Box, Container, Stack } from "@mui/material";
+import { motion } from "framer-motion";
 
 import { usePosts } from "../hooks/usePosts";
 import Spinner from "./Spinner";
 import Post from "./Post";
 import Heading from "./Heading";
-import Grid2 from "@mui/material/Unstable_Grid2/Grid2";
 
 const formattedDate = (date) => {
   const dateFormat = new Intl.DateTimeFormat("vi-VN", {
@@ -28,7 +29,19 @@ function Posts() {
 
         <Grid2 container columnSpacing={4} rowSpacing={8}>
           {posts.map((post) => (
-            <Grid2 md={4} xs={12} key={post.id}>
+            <Grid2
+              md={4}
+              sm={6}
+              xs={12}
+              key={post.id}
+              component={motion.div}
+              initial={{ y: 300 }}
+              whileInView={{
+                y: 0,
+                transition: { type: "spring", duration: 1 },
+              }}
+              viewport={{ once: true }}
+            >
               <Post
                 src={post.thumbnail}
                 title={post.title}

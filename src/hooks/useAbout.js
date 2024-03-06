@@ -1,4 +1,5 @@
 import { useQuery } from "@tanstack/react-query";
+
 import { getAbout } from "../services/apiAbout";
 
 export function useAbout() {

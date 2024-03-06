@@ -7,6 +7,7 @@ import {
   Typography,
   useTheme,
 } from "@mui/material";
+import { motion } from "framer-motion";
 
 import { useTraning } from "../hooks/useTraining";
 import { useHomepage } from "../hooks/useHomepage";
@@ -73,6 +74,17 @@ function TrainingInfo() {
             border: `3px solid ${theme.palette.primary.main}`,
             borderRadius: "15px",
           }}
+          component={motion.div}
+          initial={{ scale: 0 }}
+          whileInView={{
+            scale: 1,
+            transition: {
+              type: "spring",
+              duration: 1,
+              delay: 0.5,
+            },
+          }}
+          viewport={{ once: true }}
         >
           <Typography variant="h4">{ctaText}</Typography>
 

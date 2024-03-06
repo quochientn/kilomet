@@ -1,4 +1,6 @@
 import { Box, Container, Stack, Typography, styled } from "@mui/material";
+import { motion } from "framer-motion";
+
 import { useHomepage } from "../hooks/useHomepage";
 import Spinner from "./Spinner";
 
@@ -24,7 +26,14 @@ function Partners() {
 
   return (
     <Container maxWidth="xl" component="section">
-      <Stack spacing={8} py={12}>
+      <Stack
+        spacing={8}
+        py={12}
+        component={motion.div}
+        initial={{ y: 300 }}
+        whileInView={{ y: 0, transition: { type: "spring", duration: 1 } }}
+        viewport={{ once: true }}
+      >
         <Typography variant="h1" align="center">
           {partnersTitle}
         </Typography>

@@ -7,6 +7,7 @@ import {
   styled,
 } from "@mui/material";
 import { useNavigate } from "react-router-dom";
+import { motion } from "framer-motion";
 
 import { useHomepage } from "../hooks/useHomepage";
 import Spinner from "./Spinner";
@@ -31,11 +32,14 @@ function HomeAbout() {
         flexDirection={{ md: "row", xs: "column-reverse" }}
         gap={8}
         py={12}
+        component={motion.div}
+        initial={{ y: 300 }}
+        whileInView={{ y: 0, transition: { type: "spring", duration: 1 } }}
+        viewport={{ once: true }}
       >
         <Box>
           <StyledImg src={aboutImage} alt="Kilomet coaches" />
         </Box>
-
         <Stack
           spacing={4}
           mt={{ md: 6 }}

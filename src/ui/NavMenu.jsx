@@ -2,6 +2,7 @@ import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { Box, Drawer, IconButton, styled } from "@mui/material";
 import { MenuOutlined } from "@mui/icons-material";
+import { motion } from "framer-motion";
 
 const StyledNavList = styled("ul")`
   display: flex;
@@ -71,31 +72,66 @@ function NavMenu() {
       >
         <Box px={6} my="auto" component="nav">
           <StyledNavList sx={{ flexDirection: "column" }}>
-            <li>
+            <motion.li
+              initial={{ x: 300, opacity: 0, transition: { stiffness: 1000 } }}
+              animate={{
+                x: 0,
+                opacity: 1,
+                transition: { delay: 0.05, stiffness: 1000, velocity: -100 },
+              }}
+            >
               <StyledNavLink to="/" onClick={handleClose}>
                 Trang chủ
               </StyledNavLink>
-            </li>
-            <li>
+            </motion.li>
+            <motion.li
+              initial={{ x: 300, opacity: 0, transition: { stiffness: 1000 } }}
+              animate={{
+                x: 0,
+                opacity: 1,
+                transition: { delay: 0.05, stiffness: 1000, velocity: -100 },
+              }}
+            >
               <StyledNavLink to="/about" onClick={handleClose}>
                 Giới thiệu
               </StyledNavLink>
-            </li>
-            <li>
+            </motion.li>
+            <motion.li
+              initial={{ x: 300, opacity: 0, transition: { stiffness: 1000 } }}
+              animate={{
+                x: 0,
+                opacity: 1,
+                transition: { delay: 0.05, stiffness: 1000, velocity: -100 },
+              }}
+            >
               <StyledNavLink to="/training" onClick={handleClose}>
                 Tập luyện
               </StyledNavLink>
-            </li>
-            <li>
+            </motion.li>
+            <motion.li
+              initial={{ x: 300, opacity: 0, transition: { stiffness: 1000 } }}
+              animate={{
+                x: 0,
+                opacity: 1,
+                transition: { delay: 0.05, stiffness: 1000, velocity: -100 },
+              }}
+            >
               <StyledNavLink to="/blog" onClick={handleClose}>
                 Blog
               </StyledNavLink>
-            </li>
-            <li>
+            </motion.li>
+            <motion.li
+              initial={{ x: 300, opacity: 0, transition: { stiffness: 1000 } }}
+              animate={{
+                x: 0,
+                opacity: 1,
+                transition: { delay: 0.05, stiffness: 1000, velocity: -100 },
+              }}
+            >
               <StyledNavLink to="/contact" onClick={handleClose}>
                 Liên hệ
               </StyledNavLink>
-            </li>
+            </motion.li>
           </StyledNavList>
         </Box>
       </Drawer>

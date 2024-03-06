@@ -1,7 +1,6 @@
 import { styled } from "@mui/material";
 
 import { useSettings } from "../hooks/useSettings";
-
 import Spinner from "./Spinner";
 
 const Img = styled("img")`

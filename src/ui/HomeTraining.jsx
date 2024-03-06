@@ -1,5 +1,6 @@
 import { Box, Button, Container, Stack, Typography } from "@mui/material";
 import { useNavigate } from "react-router-dom";
+import { motion } from "framer-motion";
 
 import { useHomepage } from "../hooks/useHomepage";
 import Spinner from "./Spinner";
@@ -18,7 +19,15 @@ function HomeTraining() {
   return (
     <Box bgcolor="gray.light" py={12}>
       <Container maxWidth="xl">
-        <Stack spacing={4} mb={8} alignItems="center">
+        <Stack
+          spacing={4}
+          mb={8}
+          alignItems="center"
+          component={motion.div}
+          initial={{ y: 300 }}
+          whileInView={{ y: 0, transition: { type: "spring", duration: 1 } }}
+          viewport={{ once: true }}
+        >
           <Typography variant="h1" textAlign="center">
             {trainingTitle}
           </Typography>
